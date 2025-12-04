@@ -1,0 +1,16 @@
+# Dependências do Node
+node_modules/
+
+# Arquivo do Banco de Dados
+*.sqlite
+*.db
+
+# Arquivos de Sistema do Mac
+.DS_Store
+
+# Pasta de builds
+dist/
+build/
+
+# Variáveis de ambiente 
+.env
