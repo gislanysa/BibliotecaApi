@@ -3,10 +3,12 @@
 ![Status](https://img.shields.io/badge/status-%20concluido-green)
 ![Linguagem](https://img.shields.io/badge/linguagem-TypeScript-blue)
 ![Backend](https://img.shields.io/badge/backend-Node.js-green)
+![Frontend](https://img.shields.io/badge/frontend-React%20%7C%20Vite-blue)
+![Banco de Dados](https://img.shields.io/badge/database-SQLite-lightgrey)
 
-**Disciplina:** `Arquitetura e Desenvolvimento Back-end`
-**Professor:** `Danilo Farias`
-**Instituição:** `Faculdade Senac`
+**Disciplina:** `Arquitetura e Desenvolvimento Back-end`  
+**Professor:** `Danilo Farias`  
+**Instituição:** `Faculdade Senac`  
 **Período:** `2025.2`
 
 ## Objetivo
@@ -15,75 +17,91 @@ Este projeto consiste no desenvolvimento de uma **API Web backend** para um sist
 
 O projeto segue uma arquitetura simplificada de **Controller/Repository**, garantindo a separação de responsabilidades entre a lógica de negócio e a persistência de dados.
 
-As principais tecnologias e práticas utilizadas foram:
+## Telas do Projeto
 
-* **Node.js & Express:** Framework para construção do servidor web.
-* **TypeScript:** Para tipagem estática e segurança no código.
-* **TypeORM:** ORM (Object Relational Mapper) para comunicação com o banco de dados.
-* **SQLite:** Banco de dados relacional (escolhido pela simplicidade de configuração local).
-* **Arquitetura em Camadas:** Separação entre Controllers (Lógica) e Repositories (Persistência).
+### 1. Tela Inicial (Acervo Vazio)
+Visualização inicial quando não há livros cadastrados no sistema.  
+![Tela Inicial](assets/inicio.png)
+
+### 2. Cadastro de Livro
+Modal intuitivo e responsivo para a inserção de novos títulos ao acervo.  
+![Cadastro](assets/cadastro.png)
+
+### 3. Visualização e Gerenciamento do Acervo
+Listagem completa dos livros com indicadores visuais de disponibilidade e opções para **Editar** ou **Excluir**.  
+![Acervo](assets/acervo.png)
+
+## Tecnologias Utilizadas
+
+- **Node.js & Express:** Framework para construção do servidor web.  
+- **TypeScript:** Tipagem estática e segurança no código.  
+- **TypeORM:** ORM para comunicação com o banco de dados.  
+- **SQLite:** Banco de dados relacional simples e leve.  
+- **Arquitetura em Camadas:** Separação entre Controllers (lógica) e Repositories (persistência).  
+
 
 ## Endpoints Implementados
 
-| Operação | Método | Rota | Descrição |
-|---|---|---|---|
-| **Criar** | `POST` | `/api/livros` | Cadastra um novo livro. |
-| **Ler Todos** | `GET` | `/api/livros` | Retorna a lista completa de livros. |
-| **Ler por ID** | `GET` | `/api/livros/{id}` | Retorna os detalhes de um livro específico. |
-| **Atualizar** | `PUT` | `/api/livros/{id}` | Atualiza as informações de um livro. |
-| **Excluir** | `DELETE` | `/api/livros/{id}` | Remove um livro do sistema. |
+| Operação      | Método | Rota               | Descrição                                 |
+|---------------|--------|--------------------|---------------------------------------------|
+| **Criar**     | POST   | `/api/livros`      | Cadastra um novo livro.                     |
+| **Ler Todos** | GET    | `/api/livros`      | Retorna a lista completa de livros.         |
+| **Ler por ID**| GET    | `/api/livros/{id}` | Retorna os detalhes de um livro específico. |
+| **Atualizar** | PUT    | `/api/livros/{id}` | Atualiza as informações de um livro.        |
+| **Excluir**   | DELETE | `/api/livros/{id}` | Remove um livro do sistema.                 |
 
-## Como Executar
+## Como Executar o Projeto
 
-Para rodar este projeto na sua máquina local, siga os passos abaixo:
+O projeto possui dois diretórios:  
+- `/backend` → API  
+- `/frontend` → Interface  
 
-1.  **Clone o repositório:**
-    ```bash
-    git clone [https://github.com/gislanysa/bibliotecaapi.git](https://github.com/gislanysa/bibliotecaapi.git)
-    ```
+> Ambos precisam estar rodando simultaneamente.
 
-2.  **Entre na pasta do projeto:**
-    ```bash
-    cd bibliotecaapi
-    ```
+## Pré-requisitos
 
-3.  **Instale as dependências:**
-    Este passo é essencial para baixar o `express`, `typeorm` e outras bibliotecas necessárias.
-    ```bash
-    npm install
-    ```
+- **Node.js** (versão atual recomendada)  
+- **Git**
 
-4.  **Inicie o servidor:**
-    O banco de dados SQLite será criado automaticamente na primeira execução.
-    ```bash
-    npm run dev
-    ```
-    *O servidor iniciará na porta 3000.*
+## 1. Clonar o Repositório
 
----
-
-## Como Testar (Via Terminal)
-
-Com o servidor rodando, você pode testar as rotas usando o `curl` em outro terminal:
-
-**1. Cadastrar um Livro:**
 ```bash
-curl -X POST http://localhost:3000/api/livros \
--H "Content-Type: application/json" \
--d '{"titulo": "A Paciente Silenciosa", "autor": "Alex Michaelides", "isbn": "978-8501116437", "anoPublicacao": 2019, "disponivel": true}'
+git clone https://github.com/gislanysa/bibliotecaapi.git
+cd bibliotecaapi
 ```
-**2. Listar Livros:**
+## 2. Rodar o Backend
+
+Acesse a pasta backend
 ```bash
-curl http://localhost:3000/api/livros
-```
-**3. Atualizar um Livro:**
-```bash
-curl -X PUT http://localhost:3000/api/livros/ID-DO-LIVRO \
--H "Content-Type: application/json" \
--d '{"INSERIR O DADO QUE QUER ALTERAR AQUI"}'
-```
-**4. Deletar um Livros:**
-```bash
-curl -X DELETE http://localhost:3000/api/livros/1
+cd backend
 ```
 
+Instale as dependências
+```bash
+npm install
+```
+
+Inicie o servidor
+```bash
+npm run dev
+```
+
+## 3. Rodar o Frontend
+
+Volte para a raiz do projeto (se necessário)
+cd ..
+
+Acesse a pasta frontend
+```bash
+cd frontend
+```
+
+Instale as dependências
+```bash
+npm install
+```
+
+Inicie o projeto React
+```bash
+npm run dev
+```
