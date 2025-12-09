@@ -1,0 +1,6 @@
+
+> bibliotecaapi@1.0.0 dev
+> ts-node src/server.ts
+
+Banco SQLite conectado!
+Servidor rodando na porta 3000
