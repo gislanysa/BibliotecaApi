@@ -21,15 +21,15 @@ O projeto segue uma arquitetura simplificada de **Controller/Repository**, garan
 
 ### 1. Tela Inicial (Acervo Vazio)
 Visualização inicial quando não há livros cadastrados no sistema.  
-![Tela Vazia](./assets/inicio.png)
+![Tela Inicial](assets/inicio.png)
 
 ### 2. Cadastro de Livro
 Modal intuitivo e responsivo para a inserção de novos títulos ao acervo.  
-![Modal de Cadastro](./assets/cadastro.png)
+![Cadastro](assets/cadastro.png)
 
 ### 3. Visualização e Gerenciamento do Acervo
 Listagem completa dos livros com indicadores visuais de disponibilidade e opções para **Editar** ou **Excluir**.  
-![Listagem de Livros](./assets/acervo.png)
+![Acervo](assets/acervo.png)
 
 ## Tecnologias Utilizadas
 
